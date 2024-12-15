@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>らいふぶっかー</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: #2c2c2c;
+            border-radius: 20px;
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        a {
+            color: #00bcd4;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #0097a7;
+            text-decoration: underline;
+        }
+
+        p {
+            margin: 10px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease-out;
+        }
+
+        .animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .server-info {
+            font-style: italic;
+            color: #9e9d9d;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="animate">普段はXに生息しているらいふぶっかーと申します！(検索エンジンには申請してないから意味なし！)</p>
+        <p class="animate">クソ適当HTMLだけで作った産廃</p>
+        <p class="animate">下手したら某俳優のページよりも、某Y製作所のページよりも、ナウル共和国のホームページよりも高速</p>
+        <p class="animate"><a href="https://twitter.com/LIFEBOOK_T935K">管理人のX</a></p>
+        <p class="animate"><a href="https://twitter.com/one_dragon8gen2">管理人の彼女(?)</a></p>
+        <p class="animate"><a href="https://www.youtube.com/@lifebook_t935k">ようつべ</a></p>
+        <p class="animate"><a href="http://lifebookert935k.f5.si/antenan/gomi.html">意味深</a></p>
+        <p class="animate">エ○サイトの画像の拡張子はpngです。(変換めんどくさかった)</p>
+        <p class="animate"><a href="http://lifebookert935k.f5.si/anal/blog.html">管理人のWebサーバー運用日誌</a></p>
+        <p class="animate"><a href="http://lifebookert935k.f5.si/anal/blog/zatta.html">何でもアリなブログ</a></p>
+        <p class="animate"><a href="http://lifebookert935k.f5.si/%E3%83%8D%E3%82%BF/%E3%82%A2%E3%83%9B.html">ゴミ置き場</a></p>
+        <p class="animate"><a href="http://lifebookert935k.f5.si/hakushin/index.html">迫真！自転車競技部メンテの裏技</a></p>
+        <p class="animate"><a href="http://lifebookert935k.f5.si/links/links.html">リンク集</a></p>
+        <p class="server-info animate">鯖のスペック Celeron J4125 RAM8GB</p>
+        <p class="server-info animate">まあどこのご家庭にでもあるMiniPCやな。</p>
+        <p class="server-info animate">一般のご家庭のほうです。(RTXがない！！)</p>
+        <p class="server-info animate">親に鯖の電源ブチィ攻撃により障害が発生する場合があります。(あとアク禁も)</p>
+        <p class="server-info animate">2024.12.15現在ルーターの管理パスワード推測してアクセスした。アク禁は回避できる。</p>
+        <p class="server-info animate">ルーターはTUF AX-5400</p>
+        <div class="footer">
+            <div class="animate">powerd by iis</div>
+            <div class="animate">Code by Lifebooker</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const paragraphs = document.querySelectorAll('p');
+            let delay = 0;
+
+            paragraphs.forEach(p => {
+                setTimeout(() => {
+                    p.classList.add('animate');
+                }, delay);
+                delay += 100; // Each paragraph gets animated with 100ms delay after the previous one
+            });
+        });
+    </script>
+</body>
+</html>
